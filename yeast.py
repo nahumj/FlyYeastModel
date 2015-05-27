@@ -1,8 +1,6 @@
-###########
-#A class library to represent yeast in a mutualism model.
-#Anya Vostinar
-#5/22/15
-###########
+"""
+A class library to represent yeast in a mutualism model.
+"""
 
 class Yeast(object):
     def __init__(self):

@@ -1,8 +1,6 @@
-###########
-#A representation of the world for a fly and yeast simulation.
-#Anya Vostinar
-#5/22/15
-###########
+"""
+A representation of the world for a fly and yeast simulation.
+"""
 
 from fly import Fly
 from yeast import Yeast
@@ -15,7 +13,7 @@ for i in range(num_fly):
     fly_pop.append(Fly())
 
 yeast_pop = []
-for i in range(num_yeast_col):
+fori in range(num_yeast_col):
     yeast_pop.append(Yeast())
 
 def update():

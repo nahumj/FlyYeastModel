@@ -1,8 +1,6 @@
-############
-#A class library to model fly behavior.
-#Anya Vostinar
-#5/22/15
-############
+"""
+A class library to model fly behavior.
+"""
 
 class Fly(object):
     '''Doc string'''
