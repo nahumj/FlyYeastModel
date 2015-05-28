@@ -9,9 +9,9 @@ NUM_FLY = 10
 NUM_YEAST_COL = 10
 NUM_UPDATES = 100
 
-fly_pop = [Fly() for _ in range(NUM_FLY)]
+FLY_POP = [Fly() for _ in range(NUM_FLY)]
 
-yeast_pop = [Yeast() for _ in range(NUM_YEAST_COL)]
+FREE_YEAST_POP = [Yeast() for _ in range(NUM_YEAST_COL)]
 
 def update():
     #loop through yeast and let them try to sporulate or grow
