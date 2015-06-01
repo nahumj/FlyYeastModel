@@ -1,22 +1,17 @@
-###########
-#A representation of the world for a fly and yeast simulation.
-#Anya Vostinar
-#5/22/15
-###########
+"""
+A representation of the world for a fly and yeast simulation.
+"""
 
 from fly import Fly
 from yeast import Yeast
 
-num_fly = 10
-num_yeast_col = 10
+NUM_FLY = 10
+NUM_YEAST_COL = 10
+NUM_UPDATES = 100
 
-fly_pop = []
-for i in range(num_fly):
-    fly_pop.append(Fly())
+FLY_POP = [Fly() for _ in range(NUM_FLY)]
 
-yeast_pop = []
-for i in range(num_yeast_col):
-    yeast_pop.append(Yeast())
+FREE_YEAST_POP = [Yeast() for _ in range(NUM_YEAST_COL)]
 
 def update():
     #loop through yeast and let them try to sporulate or grow
@@ -28,5 +23,5 @@ def update():
     #if fly already had spores in it and lands in patch with room, spores hatch to yeast in that patch
     pass
 
-for i in range(100):
+for i in range(NUM_UPDATES):
     update()
