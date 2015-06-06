@@ -13,7 +13,7 @@ NUM_UPDATES = 1000
 
 FREE_YEAST_POP = [Yeast(random(), _) for _ in range(NUM_YEAST_COL)]
 #Allows for empty patches
-FREE_YEAST_POP = FREE_YEAST_POP + [None for _ in range(WORLD_SIZE - NUM_YEAST_COL)]
+FREE_YEAST_POP += [None for _ in range(WORLD_SIZE - NUM_YEAST_COL)]
 
 FLY_POP = [Fly(randint(0, len(FREE_YEAST_POP)-1)) for _ in range(NUM_FLY)]
 
@@ -32,7 +32,7 @@ def update():
         #currently having fly eat before it moves since it is easier
         result = fly.update(FREE_YEAST_POP)
         FREE_YEAST_POP[fly.location] = None
-        if result is Fly:
+        if result:
             #baby fly!
             index = randint(0, NUM_FLY-1)
             FLY_POP[index] = result
