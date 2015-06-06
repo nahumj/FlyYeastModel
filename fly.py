@@ -42,7 +42,7 @@ class Fly(object):
     def update(self, yeast_pop):
         if yeast_pop[self.location]:
             self.eat(yeast_pop[self.location])
-        if self.fitness == 10:
+        if self.fitness == 50:
             return self.reproduce()
         else:
             self.move(yeast_pop)
